@@ -33,7 +33,6 @@
             btnMultiply = new Button();
             btnDivide = new Button();
             btnEquals = new Button();
-            label1 = new Label();
             btn1 = new Button();
             btn2 = new Button();
             btn3 = new Button();
@@ -44,6 +43,8 @@
             btn8 = new Button();
             btn9 = new Button();
             btn0 = new Button();
+            txtOutputScreen = new TextBox();
+            btnClear = new Button();
             SuspendLayout();
             // 
             // btnAdd
@@ -54,6 +55,7 @@
             btnAdd.TabIndex = 0;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnSubtract
             // 
@@ -63,6 +65,7 @@
             btnSubtract.TabIndex = 1;
             btnSubtract.Text = "-";
             btnSubtract.UseVisualStyleBackColor = true;
+            btnSubtract.Click += btnSubtract_Click;
             // 
             // btnMultiply
             // 
@@ -72,6 +75,7 @@
             btnMultiply.TabIndex = 2;
             btnMultiply.Text = "x";
             btnMultiply.UseVisualStyleBackColor = true;
+            btnMultiply.Click += btnMultiply_Click;
             // 
             // btnDivide
             // 
@@ -81,6 +85,7 @@
             btnDivide.TabIndex = 3;
             btnDivide.Text = "/";
             btnDivide.UseVisualStyleBackColor = true;
+            btnDivide.Click += btnDivide_Click;
             // 
             // btnEquals
             // 
@@ -90,18 +95,7 @@
             btnEquals.TabIndex = 4;
             btnEquals.Text = "=";
             btnEquals.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.White;
-            label1.Font = new Font("NSimSun", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(397, 82);
-            label1.Name = "label1";
-            label1.Size = new Size(22, 21);
-            label1.TabIndex = 5;
-            label1.Text = "0";
+            btnEquals.Click += btnEquals_Click;
             // 
             // btn1
             // 
@@ -111,6 +105,7 @@
             btn1.TabIndex = 6;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
+            btn1.Click += btnNum_Click;
             // 
             // btn2
             // 
@@ -120,6 +115,7 @@
             btn2.TabIndex = 7;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
+            btn2.Click += btnNum_Click;
             // 
             // btn3
             // 
@@ -129,6 +125,7 @@
             btn3.TabIndex = 8;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
+            btn3.Click += btnNum_Click;
             // 
             // btn4
             // 
@@ -138,6 +135,7 @@
             btn4.TabIndex = 9;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
+            btn4.Click += btnNum_Click;
             // 
             // btn5
             // 
@@ -147,6 +145,7 @@
             btn5.TabIndex = 10;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
+            btn5.Click += btnNum_Click;
             // 
             // btn6
             // 
@@ -156,6 +155,7 @@
             btn6.TabIndex = 11;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
+            btn6.Click += btnNum_Click;
             // 
             // btn7
             // 
@@ -165,6 +165,7 @@
             btn7.TabIndex = 12;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
+            btn7.Click += btnNum_Click;
             // 
             // btn8
             // 
@@ -174,6 +175,7 @@
             btn8.TabIndex = 13;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
+            btn8.Click += btnNum_Click;
             // 
             // btn9
             // 
@@ -183,6 +185,7 @@
             btn9.TabIndex = 14;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
+            btn9.Click += btnNum_Click;
             // 
             // btn0
             // 
@@ -192,12 +195,35 @@
             btn0.TabIndex = 15;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
+            btn0.Click += btnNum_Click;
+            // 
+            // txtOutputScreen
+            // 
+            txtOutputScreen.BackColor = Color.White;
+            txtOutputScreen.Location = new Point(107, 64);
+            txtOutputScreen.Name = "txtOutputScreen";
+            txtOutputScreen.ReadOnly = true;
+            txtOutputScreen.Size = new Size(212, 23);
+            txtOutputScreen.TabIndex = 16;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(175, 141);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(47, 39);
+            btnClear.TabIndex = 17;
+            btnClear.Text = "C";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClear);
+            Controls.Add(txtOutputScreen);
             Controls.Add(btn0);
             Controls.Add(btn9);
             Controls.Add(btn8);
@@ -208,7 +234,6 @@
             Controls.Add(btn3);
             Controls.Add(btn2);
             Controls.Add(btn1);
-            Controls.Add(label1);
             Controls.Add(btnEquals);
             Controls.Add(btnDivide);
             Controls.Add(btnMultiply);
@@ -227,7 +252,6 @@
         private Button btnMultiply;
         private Button btnDivide;
         private Button btnEquals;
-        private Label label1;
         private Button btn1;
         private Button btn2;
         private Button btn3;
@@ -238,5 +262,7 @@
         private Button btn8;
         private Button btn9;
         private Button btn0;
+        private TextBox txtOutputScreen;
+        private Button btnClear;
     }
 }
