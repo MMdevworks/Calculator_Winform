@@ -60,6 +60,7 @@ namespace Calculator_Winform
             this.operation = '+';
             SaveNum1();
             txtOutputScreen.Clear();
+            lblEquation.Text = this.num1.ToString();
         }
 
         private void btnSubtract_Click(object sender, EventArgs e)
@@ -88,6 +89,27 @@ namespace Calculator_Winform
             SaveNum2();
             txtOutputScreen.Clear();
             HandleOperations(this.operation);
+            lblEquation.Text =$"{this.num1.ToString()} {this.operation} {this.num2.ToString()} =";
+        }
+
+        private void btnDecimal_Click(object sender, EventArgs e)
+        {
+            if (!txtOutputScreen.Text.Contains('.'))
+            {
+                txtOutputScreen.Text += ".";
+            }
+        }
+
+        private void btnPosNeg_Click(object sender, EventArgs e)
+        {
+            if (!txtOutputScreen.Text.Contains('-'))
+            {
+                txtOutputScreen.Text = "-" + txtOutputScreen.Text;
+            }
+            else
+            {
+                txtOutputScreen.Text = txtOutputScreen.Text.Trim('-');
+            }
         }
     }
 }

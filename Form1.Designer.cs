@@ -45,6 +45,9 @@
             btn0 = new Button();
             txtOutputScreen = new TextBox();
             btnClear = new Button();
+            btnDecimal = new Button();
+            btnPosNeg = new Button();
+            lblEquation = new Label();
             SuspendLayout();
             // 
             // btnAdd
@@ -200,11 +203,13 @@
             // txtOutputScreen
             // 
             txtOutputScreen.BackColor = Color.White;
-            txtOutputScreen.Location = new Point(107, 64);
+            txtOutputScreen.Location = new Point(106, 92);
             txtOutputScreen.Name = "txtOutputScreen";
             txtOutputScreen.ReadOnly = true;
             txtOutputScreen.Size = new Size(212, 23);
             txtOutputScreen.TabIndex = 16;
+            txtOutputScreen.Text = "0";
+            txtOutputScreen.TextAlign = HorizontalAlignment.Right;
             // 
             // btnClear
             // 
@@ -216,12 +221,44 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
+            // btnDecimal
+            // 
+            btnDecimal.Location = new Point(250, 141);
+            btnDecimal.Name = "btnDecimal";
+            btnDecimal.Size = new Size(47, 39);
+            btnDecimal.TabIndex = 18;
+            btnDecimal.Text = ".";
+            btnDecimal.UseVisualStyleBackColor = true;
+            btnDecimal.Click += btnDecimal_Click;
+            // 
+            // btnPosNeg
+            // 
+            btnPosNeg.Location = new Point(314, 313);
+            btnPosNeg.Name = "btnPosNeg";
+            btnPosNeg.Size = new Size(75, 23);
+            btnPosNeg.TabIndex = 19;
+            btnPosNeg.Text = "+/-";
+            btnPosNeg.UseVisualStyleBackColor = true;
+            btnPosNeg.Click += btnPosNeg_Click;
+            // 
+            // lblEquation
+            // 
+            lblEquation.AutoSize = true;
+            lblEquation.Location = new Point(250, 74);
+            lblEquation.Name = "lblEquation";
+            lblEquation.Size = new Size(13, 15);
+            lblEquation.TabIndex = 20;
+            lblEquation.Text = "0";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 224, 224);
             ClientSize = new Size(800, 450);
+            Controls.Add(lblEquation);
+            Controls.Add(btnPosNeg);
+            Controls.Add(btnDecimal);
             Controls.Add(btnClear);
             Controls.Add(txtOutputScreen);
             Controls.Add(btn0);
@@ -264,5 +301,8 @@
         private Button btn0;
         private TextBox txtOutputScreen;
         private Button btnClear;
+        private Button btnDecimal;
+        private Button btnPosNeg;
+        private Label lblEquation;
     }
 }
