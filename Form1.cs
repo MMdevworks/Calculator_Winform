@@ -1,3 +1,5 @@
+using System;
+
 namespace Calculator_Winform
 {
     public partial class Form1 : Form
@@ -5,8 +7,9 @@ namespace Calculator_Winform
         double num1;
         double num2;
         double result;
-
         char operation;
+        //bool usedOperator = false;
+
 
         public Form1()
         {
@@ -27,8 +30,10 @@ namespace Calculator_Winform
             switch (op)
             {
                 case '+':
+                    // if num 2 is not = null
                     this.result = math.Add(this.num1, this.num2);
                     txtOutputScreen.Text = this.result.ToString();
+
                     break;
                 case '-':
                     this.result = math.Subtract(this.num1, this.num2);
@@ -53,35 +58,35 @@ namespace Calculator_Winform
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtOutputScreen.Clear();
+            lblEquation.Text = "0";
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+
+        private void HandleOperator(char op)
         {
-            this.operation = '+';
+            this.operation = op;
             SaveNum1();
             txtOutputScreen.Clear();
             lblEquation.Text = this.num1.ToString();
         }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            HandleOperator('+');
+        }
 
         private void btnSubtract_Click(object sender, EventArgs e)
         {
-            this.operation = '-';
-            SaveNum1();
-            txtOutputScreen.Clear();
+            HandleOperator('-');
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            this.operation = '*';
-            SaveNum1();
-            txtOutputScreen.Clear();
+            HandleOperator('*');
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            this.operation = '/';
-            SaveNum1();
-            txtOutputScreen.Clear();
+            HandleOperator('/');
         }
 
         private void btnEquals_Click(object sender, EventArgs e)
@@ -89,7 +94,7 @@ namespace Calculator_Winform
             SaveNum2();
             txtOutputScreen.Clear();
             HandleOperations(this.operation);
-            lblEquation.Text =$"{this.num1.ToString()} {this.operation} {this.num2.ToString()} =";
+            lblEquation.Text = $"{this.num1.ToString()} {this.operation} {this.num2.ToString()} =";
         }
 
         private void btnDecimal_Click(object sender, EventArgs e)
@@ -110,6 +115,12 @@ namespace Calculator_Winform
             {
                 txtOutputScreen.Text = txtOutputScreen.Text.Trim('-');
             }
+        }
+
+        private void btnBackspace_Click(object sender, EventArgs e)
+        {
+            int length = txtOutputScreen.Text.Length-1;
+            txtOutputScreen.Text = txtOutputScreen.Text.Substring(0,(length));
         }
     }
 }
