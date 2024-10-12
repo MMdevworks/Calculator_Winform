@@ -57,7 +57,7 @@
             btnAdd.BackColor = Color.FromArgb(255, 128, 128);
             btnAdd.Location = new Point(57, 342);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(47, 23);
+            btnAdd.Size = new Size(47, 22);
             btnAdd.TabIndex = 0;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = false;
@@ -68,7 +68,7 @@
             btnSubtract.BackColor = Color.FromArgb(255, 128, 128);
             btnSubtract.Location = new Point(110, 341);
             btnSubtract.Name = "btnSubtract";
-            btnSubtract.Size = new Size(47, 23);
+            btnSubtract.Size = new Size(47, 22);
             btnSubtract.TabIndex = 1;
             btnSubtract.Text = "-";
             btnSubtract.UseVisualStyleBackColor = false;
@@ -79,7 +79,7 @@
             btnMultiply.BackColor = Color.FromArgb(255, 128, 128);
             btnMultiply.Location = new Point(163, 341);
             btnMultiply.Name = "btnMultiply";
-            btnMultiply.Size = new Size(47, 23);
+            btnMultiply.Size = new Size(47, 22);
             btnMultiply.TabIndex = 2;
             btnMultiply.Text = "x";
             btnMultiply.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             btnDivide.BackColor = Color.FromArgb(255, 128, 128);
             btnDivide.Location = new Point(216, 341);
             btnDivide.Name = "btnDivide";
-            btnDivide.Size = new Size(47, 23);
+            btnDivide.Size = new Size(47, 22);
             btnDivide.TabIndex = 3;
             btnDivide.Text = "/";
             btnDivide.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@
             btnEquals.BackColor = Color.FromArgb(255, 128, 128);
             btnEquals.Location = new Point(214, 313);
             btnEquals.Name = "btnEquals";
-            btnEquals.Size = new Size(47, 23);
+            btnEquals.Size = new Size(47, 22);
             btnEquals.TabIndex = 4;
             btnEquals.Text = "=";
             btnEquals.UseVisualStyleBackColor = false;
@@ -256,7 +256,7 @@
             btnPosNeg.BackColor = Color.Yellow;
             btnPosNeg.Location = new Point(216, 264);
             btnPosNeg.Name = "btnPosNeg";
-            btnPosNeg.Size = new Size(47, 23);
+            btnPosNeg.Size = new Size(47, 22);
             btnPosNeg.TabIndex = 19;
             btnPosNeg.Text = "+/-";
             btnPosNeg.UseVisualStyleBackColor = false;
@@ -319,6 +319,7 @@
             Controls.Add(btnMultiply);
             Controls.Add(btnSubtract);
             Controls.Add(btnAdd);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Form1";
             Text = "MyCalc :)";
             ResumeLayout(false);

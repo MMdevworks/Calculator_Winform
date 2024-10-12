@@ -6,6 +6,7 @@ namespace Calculator_Winform
     {
         double num1;
         double num2;
+        double numHolder;
         double result;
         char operation;
         bool finishEquation = false;
@@ -47,6 +48,8 @@ namespace Calculator_Winform
                     break;
             }
             txtOutputScreen.Text = this.result.ToString();
+            // assign num1 to be held before reassigning num1 to the result of the operation
+            this.numHolder = this.num1;
             this.num1 = this.result;
         }
 
@@ -96,7 +99,8 @@ namespace Calculator_Winform
             SaveNum2();
             //txtOutputScreen.Clear();
             HandleOperations(this.operation);
-            lblEquation.Text = $"{this.num1} {this.operation} {this.num2} =";
+            lblEquation.Text = $"{this.numHolder} {this.operation} {this.num2} =";
+            txtOutputScreen.Text = $"{this.num1}";
             finishEquation = true;
         }
 
