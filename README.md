@@ -8,7 +8,7 @@ https://github.com/user-attachments/assets/40f89eae-42fb-41a5-ae40-f6ed0a1b812f
 
 A simple compact calculator application coded in C# and build on Winforms UI framework.
 
-<b>Project Goal:</b> Calculating logic with clean user interface.
+<b>Project Objective:</b> Calculating logic with clean user interface.
 
 ### Built With
  [![Csharp][csharp-badge]][csharp-url]
@@ -52,7 +52,7 @@ Before you can run this application locally, make sure you have the following to
 | C | clear |
 | = | equals, submit equation |
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
 [dotnet-badge]: https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white
 [Dotnet-url]: https://dotnet.microsoft.com/
